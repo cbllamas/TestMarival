@@ -7,6 +7,7 @@
 - Run __php artisan migrate --seed__ (it has some seeded data for your testing)
 - Run __npm install__ 
 - Run __npm run dev__ 
+- Run __php artisan serve__ 
 - That's it: launch the URL `/tickets`
 
 
