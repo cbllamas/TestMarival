@@ -5,33 +5,33 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Tickets List') }}</div>
+                <div class="card-header">{{ __('Lista de Tickets') }}</div>
 
                 <div class="card-body">
-                    <a class="btn btn-primary" href="{{ route('tickets.create') }}">Add new ticket</a>
+                    <a class="btn btn-primary" href="{{ route('tickets.create') }}">Agregar Nuevo Ticket</a>
                     <br /><br />
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Category</th>
-                                <th>Time</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Categoria</th>
+                                <th>Hora</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @forelse ($tickets as $ticket)
+                            @forelse ($tickets as $ticket)
                             <tr>
                                 <td>{{ $ticket->name }}</td>
                                 <td>{{ $ticket->email }}</td>
                                 <td>{{ $ticket->category->name }}</td>
                                 <td>{{ $ticket->created_at }}</td>
                             </tr>
-                        @empty
+                            @empty
                             <tr>
-                                <td colspan="4">{{ __('No tickets found') }}</td>
+                                <td colspan="4">{{ __('No hay Tickets Registrados') }}</td>
                             </tr>
-                        @endforelse
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
